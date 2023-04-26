@@ -15,10 +15,12 @@
     if (isset($_POST["szamlalo"])) {
         $szamlalo = $_POST["szamlalo"];
     }
-    echo $szamlalo . "<br>";
-    $szamlalo++;
+    echo (++$szamlalo) . "<br>";
+    
+    
     ?>
-    <form action-"rejtett.php" method="post"> <input type="hidden" name="szamlalo" value="<?php echo $szamlalo ?>"> <input type="submit" value="Növel">
+    <form action-"rejtett.php" method="post"> <input type="text" name="szamlalo" 
+    value="<?php echo $szamlalo?>"> <input type="submit" value="Növel">
     </form>
 
 </body>
